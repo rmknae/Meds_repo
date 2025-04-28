@@ -1,1 +1,1 @@
-<h6 align="centre > Meds Training </h6>
+<h6 align="centre" > Meds Training </h6>
