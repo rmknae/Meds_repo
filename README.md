@@ -1,6 +1,16 @@
 # Meds Training
 ## by Rameen 
 ---
+# Things learnt
+###
+- [x] Shell Scripting
+- [x] Vim Commands
+- [x] Git branching
+- [x] Markdown File
+- [ ] Make File
+- [ ] Verilator
+- [ ] GTKWave
+ 
 # The Shell Scripting Tutorial
 <p align="center">
   <img src="https://devopscube.com/content/images/size/w2000/format/webp/2025/03/shell-scripting-linux-1.png" 
