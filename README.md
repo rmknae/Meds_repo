@@ -137,24 +137,24 @@ ls $the_path
 ```
 
 
-#### Script Explanation (Line by Line)
+**Script Explanation (Line by Line)**
 
-**Line 1**: `#!/bin/bash`
+Line 1: `#!/bin/bash`
 The shebang (`#!/bin/bash`) tells the system to use the **bash shell** to run the script. This is the first line of every bash script and is required for the script to execute correctly.
 
-**Line 2**: `echo "Today is "`
+Line 2: `echo "Today is "`
 This command uses `echo` to print the current date and time to the terminal. It’s calling the `date` command wrapped in backticks (`` ` ``) to output the date.
 
-**Line 3**: `echo -e "\nEnter the path to the directory:"`
+Line 3: `echo -e "\nEnter the path to the directory:"`
 This line prompts the user to enter a directory path. The `-e` flag allows the interpretation of escape characters (like `\n` for a new line), so the message is displayed on a new line.
 
-**Line 4**: `read the_path`
+Line 4: `read the_path`
 The `read` command waits for the user to enter input in the terminal. It stores that input in the variable `the_path`.
 
-**Line 5**: `echo -e "\nYour path has the following files and folders:"`
+Line 5: `echo -e "\nYour path has the following files and folders:"`
 This line prints a message informing the user that the script will now list the contents of the directory they specified. Again, `-e` allows new lines (`\n`) to be interpreted.
 
-**Line 6**: `ls $the_path`
+Line 6: `ls $the_path`
 The `ls` command is used to list the files and directories in the specified path. The `$the_path` variable contains the path entered by the user, which is then passed as an argument to `ls`.
 
 **Step 3: Save and Exit**
