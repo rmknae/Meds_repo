@@ -20,6 +20,35 @@ This tutorial is written to help people understand some of the basics of shell s
 
 - **Windows** (PowerShell): Press the Windows key, type PowerShell, and hit Enter.
 
+---
+**Let's get started!!!**
 
+## 🖥️  Shell Scripting:
+A shell script is just a file/program that contains a list of commands you would normally type in the terminal. The script runs these commands automatically when you execute it, saving you time and effort.
+### Example: 
+Here’s a simple shell script:
+
+```
+#!/bin/bash
+echo "Hello, World!
+```
+
+**How to Run It:**
+  1.  Create a file called hello.sh.
+  2.  Add the script above to the file.
+  3.  Open the terminal and type the following to make the script executable:
+
+```
+chmod +x hello.sh
+```
+  4. Now, run the script with:
+```
+./hello.sh
+```
+### Output
+```
+Hello, World!
+```
+That's it! A shell script is just a way to automate tasks by writing commands in a file and running them all at once.
 
 
