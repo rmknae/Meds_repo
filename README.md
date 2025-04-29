@@ -25,7 +25,7 @@ This tutorial is written to help people understand some of the basics of shell s
 
 ## 🖥️  Shell Scripting:
 A shell script is just a file/program that contains a list of commands you would normally type in the terminal. The script runs these commands automatically when you execute it, saving you time and effort.
-## Running Shell Commands from the Command Line
+### Running Shell Commands from the Command Line
 When you open your terminal, you will see a prompt that looks something like this:
 ```
 [username@host ~]$
@@ -34,7 +34,9 @@ This is where you type in commands to interact with your system. A basic command
 ```
 command [OPTIONS] arguments
 ```
-**Let’s try a few basic shell commands and their outputs:**
+
+---
+### Let’s try a few basic shell commands and their outputs:
 
 **Example # 1**
 
@@ -50,6 +52,7 @@ Tue Mar 14 13:08:57 PKT 2023
 **Example # 2**
 
 ```pwd```: Displays the current directory
+
 Input:
 ```
 users:~$ pwd
@@ -64,6 +67,7 @@ users:~$ pwd
 **Example # 3**
 
 ```ls```: Lists files and directories in the current directory
+
 Input:
 ```
 users:~$ ls
@@ -78,6 +82,7 @@ file1.txt  file2.txt  script.sh
 **Example # 4**
 
 ```echo```: Prints a string of text or the value of a variable
+
 Input:
 ```
 users:~$ echo "Hello, Shell Scripting!"
@@ -88,34 +93,67 @@ Output:
 users:~$ echo "Hello, Shell Scripting!"
 Hello, Shell Scripting!
 ```
+---
 
+### How to Create and Execute Shell Scripts
+#### Naming Convention:
+Shell scripts typically end with ```.sh```, but it is not mandatory for them to work. It’s just a convention that makes the script recognizable as a shell script.
 
+#### Adding the Shebang:
+Shell scripts usually start with the shebang (```#!/bin/bash```). The shebang tells the system to use the bash shell to execute the script.
 
-### Example: 
-Here’s a simple shell script:
+**Here’s an example of the shebang:**
 ```
 #!/bin/bash
-echo "Hello, World!
+```
+To find your bash shell path, you can run:
+```
+which bash
+```
+#### Creating Our First Shell Script
+Let’s create a simple script that prompts the user to input a directory path and lists the files and folders inside it.
+
+**Step 1: Create a New Script File**
+
+Use any text editor to create a new script file. For example, you can use vi:
+
+```
+vi myscript.sh
 ```
 
-**How to Run It:**
-  1.  Create a file called hello.sh.
-  2.  Add the script above to the file.
-  3.  Open the terminal and type the following to make the script executable:
+**Step 2 : Add the Script Content**
+
+Add the following lines to the file:
 
 ```
-chmod +x hello.sh
+#!/bin/bash
+echo "Today is " `date`
+
+echo -e "\nEnter the path to the directory:"
+read the_path
+
+echo -e "\nYour path has the following files and folders: "
+ls $the_path
 ```
-  4. Now, run the script with:
-```
-./hello.sh
-```
-### Output
-```
-Hello, World!
-```
-That's it! A shell script is just a way to automate tasks by writing commands in a file and running them all at once.
 
 
+### Script Explanation (Line by Line)
 
+#### Line 1: `#!/bin/bash`
+The shebang (`#!/bin/bash`) tells the system to use the **bash shell** to run the script. This is the first line of every bash script and is required for the script to execute correctly.
+
+#### Line 2: `echo "Today is "`
+This command uses `echo` to print the current date and time to the terminal. It’s calling the `date` command wrapped in backticks (`` ` ``) to output the date.
+
+#### Line 3: `echo -e "\nEnter the path to the directory:"`
+This line prompts the user to enter a directory path. The `-e` flag allows the interpretation of escape characters (like `\n` for a new line), so the message is displayed on a new line.
+
+#### Line 4: `read the_path`
+The `read` command waits for the user to enter input in the terminal. It stores that input in the variable `the_path`.
+
+#### Line 5: `echo -e "\nYour path has the following files and folders:"`
+This line prints a message informing the user that the script will now list the contents of the directory they specified. Again, `-e` allows new lines (`\n`) to be interpreted.
+
+#### Line 6: `ls $the_path`
+The `ls` command is used to list the files and directories in the specified path. The `$the_path` variable contains the path entered by the user, which is then passed as an argument to `ls`.
 
