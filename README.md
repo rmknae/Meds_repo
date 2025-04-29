@@ -25,9 +25,74 @@ This tutorial is written to help people understand some of the basics of shell s
 
 ## 🖥️  Shell Scripting:
 A shell script is just a file/program that contains a list of commands you would normally type in the terminal. The script runs these commands automatically when you execute it, saving you time and effort.
+## Running Shell Commands from the Command Line
+When you open your terminal, you will see a prompt that looks something like this:
+```
+[username@host ~]$
+```
+This is where you type in commands to interact with your system. A basic command follows this structure:
+```
+command [OPTIONS] arguments
+```
+**Let’s try a few basic shell commands and their outputs:**
+
+**Example # 1**
+
+Input:
+```
+users:~$ date
+```
+output: 
+```
+users:~$ date
+Tue Mar 14 13:08:57 PKT 2023
+```
+**Example # 2**
+
+```pwd```: Displays the current directory
+Input:
+```
+users:~$ pwd
+```
+Output:
+
+```
+users:~$ pwd
+/home/username
+```
+
+**Example # 3**
+
+```ls```: Lists files and directories in the current directory
+Input:
+```
+users:~$ ls
+```
+Output:
+
+```
+users:~$ ls
+file1.txt  file2.txt  script.sh
+```
+
+**Example # 4**
+
+```echo```: Prints a string of text or the value of a variable
+Input:
+```
+users:~$ echo "Hello, Shell Scripting!"
+```
+Output:
+
+```
+users:~$ echo "Hello, Shell Scripting!"
+Hello, Shell Scripting!
+```
+
+
+
 ### Example: 
 Here’s a simple shell script:
-
 ```
 #!/bin/bash
 echo "Hello, World!
@@ -50,5 +115,7 @@ chmod +x hello.sh
 Hello, World!
 ```
 That's it! A shell script is just a way to automate tasks by writing commands in a file and running them all at once.
+
+
 
 
