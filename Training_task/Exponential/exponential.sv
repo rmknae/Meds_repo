@@ -3,7 +3,7 @@ module exponential_tb;
   real result;
 
   function real exponential(real z);
-    real x, sum_items, precision, x_by_n, fac_n, abs_x_by_n;
+    real x, sum_items, precision, x_by_n, fac_n;
     int n;
     begin
       x = (z < 0) ? -z : z;
