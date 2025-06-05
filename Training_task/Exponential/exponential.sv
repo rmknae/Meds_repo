@@ -12,14 +12,14 @@ module exponential_tb;
       precision = 1e-10;
       x_by_n = 1.0;
       fac_n = 1.0;
-      abs_x_by_n = 1.0;
+      
 
-      while (abs_x_by_n > precision) begin
+      while (x_by_n > precision) begin
         sum_items += x_by_n;
         n += 1;
         fac_n *= n;
         x_by_n = (x ** n) / fac_n;
-        abs_x_by_n = (x_by_n < 0) ? -x_by_n : x_by_n;
+        
       end
 
       if (z > 0)
