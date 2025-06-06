@@ -71,30 +71,29 @@ These step by step process is the transformation hierarchy.
 - **Efficient and high-performance**
 - **Difficult to program and use**
 
-## 🔌 Transistors
+##  Transistors
 
 Computers are built from **very large numbers of very small structures** called **transistors**.
 
-### 🧱 MOS Transistors
+###  MOS Transistors
 These are made from:
 - **Conductors**
 - **Insulators**
 - **Semiconductors**
 
-### ❓ Why Are Transistors Useful?
+###  Why Are Transistors Useful?
 We can **combine many transistors** to build **simple logic gates**, which are the foundation of digital circuits.
 
-### 🔄 Types of MOS Transistors
+###  Types of MOS Transistors
 
-#### n-type (nMOS)
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/N-Ch-MOSFET_en.svg/512px-N-Ch-MOSFET_en.svg.png" width="300" alt="nMOS Transistor">
-</p>
+- **n-type (nMOS)**
+- **p-type (pMOS)**
 
-#### p-type (pMOS)
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/P-Ch-MOSFET_en.svg/512px-P-Ch-MOSFET_en.svg.png" width="300" alt="pMOS Transistor">
+  <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/2.PNG?raw=true" width="400" alt="nMOS and pMOS Transistors">
 </p>
+They both operate logically in the same way. this is how they work: 
+
 
 how these transistopres are connected to form logic gates?
 how logic gates are inetconnected to form l,arger units that are needed to construct a computer?
