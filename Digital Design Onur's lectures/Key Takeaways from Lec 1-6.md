@@ -106,7 +106,11 @@ Computers solve problems through a step-by-step process:
 #### CMOS Technology  
 - Combines nMOS and pMOS transistors to create logic gates that are **power efficient**.  
 - CMOS gates are fundamental in modern digital design, implementing efficient NOT, NAND, and NOR gates.
-- General cmos structure: 
+
+<p align="center">
+  <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/4.png?raw=true" width="400" alt="General CMOS Structure">
+</p>
+
 ---
 
 ### From Transistors to Logic Gates to Complex Units  
