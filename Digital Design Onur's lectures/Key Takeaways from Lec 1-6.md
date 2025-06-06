@@ -59,7 +59,7 @@ Computers solve problems through a step-by-step process:
 - **Devices**  
   Logic gates are composed of transistors, tiny switches controlling electron flow.
 
-- **Physics**  
+- **Electrons**  
   At the fundamental level, electron movement in silicon enables all of this functionality.
 
 <p align="center">
