@@ -58,7 +58,7 @@ To answer that, we need to understand that computers follow a step-by-step proce
 This step-by-step process is known as the **transformation hierarchy**.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rmknae/Meds_repo/main/Digital%20Design%20Onur's%20lectures/pngs/Capture.PNG" alt="Transformation Hierarchy" width="400">
+  <img src="https://raw.githubusercontent.com/rmknae/Meds_repo/main/Digital%20Design%20Onur's%20lectures/pngs/Capture.PNG" alt="Transformation Hierarchy" width="150">
 </p>
 
 ---
