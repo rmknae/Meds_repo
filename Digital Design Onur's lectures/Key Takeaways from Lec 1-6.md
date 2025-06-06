@@ -94,8 +94,8 @@ These are made from:
 We can **combine many transistors** to build **simple logic gates**, which are the foundation of digital circuits.
 
 ### Types of MOS Transistors  
-- **n-type (nMOS)**  
-- **p-type (pMOS)**
+- **n-type (nMOS)**  : Good for *pulling down* the output.
+- **p-type (pMOS)**  : Good for *pulling up* the output.
 
 <p align="center">
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/2.PNG?raw=true" width="400" alt="nMOS and pMOS Transistors">
