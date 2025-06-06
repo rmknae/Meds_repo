@@ -48,3 +48,9 @@ To answer that, we need to understand that computers follow a step-by-step proce
 - **Physics**  
   At the deepest level, everything is about moving electrons through materials like silicon to make the computer work.
 
+These step by step process is the transformation hierarchy.
+
+
+
+
+
