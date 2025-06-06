@@ -1,14 +1,18 @@
-# Digital Design & Computer Architecture  
-**Key Takeaways from Onur Mutlu’s Lectures**
+<div align="center">
+  <h1>Digital Design & Computer Architecture</h1>
+</div>
+<p align="center">
+  <strong>Key Takeaways from Onur Mutlu’s Lectures</strong>
+</p>
 
----
+
 
 ## Introduction  
 Digital systems power computers, phones, and other smart devices. Learning digital design helps you build hardware, improve software, or pass exams. This guide explains the main ideas from Onur Mutlu’s first six lectures in simple words.
 
 ---
 
-## Lecture 1  
+## *Lecture 1*  
 
 We use computers to solve problems quickly and efficiently such as performing calculations, analyzing data, or running applications. Computers solve problems by orchestrating the movement of electrons. This might lead us to wonder: how exactly do electrons help solve these problems?
 
@@ -49,6 +53,13 @@ To answer that, we need to understand that computers follow a step-by-step proce
   At the deepest level, everything is about moving electrons through materials like silicon to make the computer work.
 
 These step by step process is the transformation hierarchy.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rmknae/Meds_repo/main/Digital%20Design%20Onur's%20lectures/pngs/Capture.PNG" alt="Capture" width="100">
+</p>
+
+
 
 
 
