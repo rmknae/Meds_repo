@@ -16,50 +16,51 @@ Digital systems power computers, phones, and other smart devices. Learning digit
 We use computers to solve problems quickly and efficiently such as performing calculations, analyzing data, or running applications. Computers solve problems by orchestrating the movement of electrons.
 
 ### The Transformation Hierarchy: How Problems Become Solutions  
-Computers solve problems through a step-by-step process:  
 
-- **Problem**  
-  Something we want to figure out, like adding numbers or sorting data.
 
-- **Algorithm**  
-  A clear plan to solve the problem, like a recipe with steps.
+Computers solve problems through a series of layered steps, from high-level tasks to low-level hardware:
 
-- **Program**  
-  The plan written in a coding language, like Python or C++, so the computer can understand it.
+- **Problem**
+  - A task to solve (e.g., sorting data, calculating numbers).
 
-- **System Software**  
-  Tools that help run the program and manage the computer. These include:
+- **Algorithm**
+  - A step-by-step method or recipe to solve the problem.
 
-  - **Compiler/Interpreter**: Turns code into instructions the computer can follow.  
-  - **Operating System (OS)**: Controls the computer’s hardware and apps, like Windows or Linux.  
-  - **Memory Management**: Makes sure programs use memory properly.  
-  - **Virtual Machine (VM)**: Acts like a fake computer to make programs work on different devices.
+- **Program**
+  - The algorithm written in a programming language (e.g., Python, C++).
 
-- **Computer Architecture**  
-  The way software talks to hardware.
+- **System Software**
+  - Tools that manage and run programs:
+    - **Compiler/Interpreter**: Converts code into executable instructions.
+    - **Operating System (OS)**: Manages hardware and apps (e.g., Windows, Linux).
+    - **Memory Management**: Allocates memory to programs efficiently.
+    - **Virtual Machine (VM)**: Enables platform-independent program execution.
 
-  - **Instruction Set Architecture (ISA):**  
-    - A list of commands the processor can execute, like “add” or “save.”  
-    - It serves as the interface between software and hardware.  
+- **Computer Architecture**
+  - The interface between software and hardware.
+
+  - **Instruction Set Architecture (ISA)**:
+    - A set of commands the CPU can execute (e.g., `add`, `save`).
+    - Acts as the boundary between software and hardware.
     - Examples: x86 (PCs), ARM (phones).
 
-- **Microarchitecture**  
-  How the processor is physically built to execute instructions. Key components include:
+- **Microarchitecture**
+  - The internal organization of the processor that implements the ISA:
+    - **ALUs**: Perform arithmetic and logical operations.
+    - **Registers**: Small, fast storage locations.
+    - **Pipelines**: Allow parallel instruction execution.
+    - **Control Units**: Direct and coordinate processor operations.
 
-  - **ALUs**: Perform arithmetic and logic operations.  
-  - **Registers**: Small fast storage locations.  
-  - **Pipelines**: Enable parallel execution of instructions.  
-  - **Control Units**: Coordinate processor activities.
+- **Logic Circuits**
+  - Built from logic gates (AND, OR, NOT) to handle binary computations.
 
-- **Logic Circuits**  
-  Constructed from logic gates (AND, OR, NOT) performing simple binary operations.
+- **Devices**
+  - Logic gates are made from **transistors**, which are tiny electronic switches.
 
-- **Devices**  
-  Logic gates are composed of transistors, tiny switches controlling electron flow.
+- **Physics**
+  - The movement of electrons in silicon enables all digital processing.
 
-- **Physics**  
-  At the fundamental level, electron movement in silicon enables all of this functionality.
-
+Following is a pictre from the lecture: 
 <p align="center">
   <img src="https://raw.githubusercontent.com/rmknae/Meds_repo/main/Digital%20Design%20Onur's%20lectures/pngs/Capture.PNG" alt="Transformation Hierarchy" width="150">
 </p>
