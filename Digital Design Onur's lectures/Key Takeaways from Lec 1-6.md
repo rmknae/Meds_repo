@@ -297,7 +297,7 @@ Canonical forms express Boolean functions in standard formats.
   ---
 Now let us discuss some important Combinational circuits. These are few of them: 
 
-###  Decoder
+##  Decoder
 
 - A **decoder** decodes an input pattern 
 - n inputs and 2^n outputs. Only one the outputs evaluates to one depending on the pattern that comes on the input.
@@ -320,7 +320,7 @@ Now let us discuss some important Combinational circuits. These are few of them:
 
 ---
 
-### Multiplexer (MUX)
+## Multiplexer (MUX)
 
 A **multiplexer** selects one of `N` input lines and connects it to a **single output**, based on **select lines**.
 
@@ -346,7 +346,7 @@ You can implement an AND gate by wiring MUX inputs such that the output = `A •
 
 ---
 
-###  Full Adder
+##  Full Adder
 
 A **full adder** adds three bits: `A`, `B`, and carry-in (`Cin`), producing a **sum** and **carry-out** (`Cout`).
 
@@ -373,7 +373,7 @@ A **full adder** adds three bits: `A`, `B`, and carry-in (`Cin`), producing a **
 
 ---
 
-###  PLA – Programmable Logic Array
+##  PLA – Programmable Logic Array
 
 A **PLA** is a configurable logic device used to implement **combinational logic circuits**.
 
