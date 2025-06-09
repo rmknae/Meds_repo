@@ -40,7 +40,7 @@ Computers solve problems through a series of layered steps, from high-level task
   - The interface between software and hardware.
 
   - **Instruction Set Architecture (ISA)**:
-    - A set of commands the CPU can execute (e.g., `add`, `save`).
+    - A set of commands the CPU can execute (e.g., add, save).
     - Acts as the boundary between software and hardware.
     - Examples: x86 (PCs), ARM (phones).
 
@@ -129,4 +129,3 @@ They both operate logically in the same way. This is how they work:
 - **XNOR Gate:** Outputs 1 if **an even number of inputs** are 1 (NOT of XOR).
 
 ---
-
