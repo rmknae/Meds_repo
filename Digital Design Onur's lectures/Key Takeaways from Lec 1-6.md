@@ -5,12 +5,12 @@
   <strong>Key Takeaways from Onur Mutlu’s Lectures</strong>
 </p>
 
-## Introduction  
+# Introduction  
 Digital systems power computers, phones, and other smart devices. Learning digital design helps you build hardware, improve software, or pass exams. This guide explains the main ideas from Onur Mutlu’s first six lectures in simple words.
 
 ---
 
-## Lecture 1: Foundations of Digital Design and Computer Architecture  
+# *Lecture 1: Foundations of Digital Design and Computer Architecture*  
 
 ### Why Use Computers?  
 We use computers to solve problems quickly and efficiently such as performing calculations, analyzing data, or running applications. Computers solve problems by orchestrating the movement of electrons.
@@ -129,13 +129,14 @@ They both operate logically in the same way. This is how they work:
 - **XNOR Gate:** Outputs 1 if **an even number of inputs** are 1 (NOT of XOR).
 
 ---
-## Lecture 2: Power, Energy & Logic Circuits
+# *Lecture 2: Power, Energy & Logic Circuits*
 
 Understanding power and energy consumption is crucial in digital design. Efficient systems must manage both **dynamic** and **static** power while performing computation through well-structured **logic circuits**.
 
 ---
 
-### Power Consumption in Digital Circuits
+## *Power and Energy Consumption in Digital Circuits*
+### *Power in Digital Circuits*
 
 ####      Dynamic Power Consumption
 - Power used when signals **switch between 0 and 1**
@@ -165,7 +166,7 @@ We must include both dynamic and static power in calculations to estimate real-w
 
 ---
 
-### Moore’s Law
+## *Moore’s Law*
 
 - **Moore’s Law**: The number of transistors on a chip doubles approximately **every two years**.
 - Effects:
@@ -176,7 +177,7 @@ We must include both dynamic and static power in calculations to estimate real-w
 
 ---
 
-###  Logic Circuits 
+##  *Logic Circuits*
 
 Logic circuits are essential for processing binary data. They consist of **inputs**, **outputs**, and **interconnections** defined by logic rules.
 
@@ -213,11 +214,11 @@ Logic circuits are essential for processing binary data. They consist of **input
 - Uses memory elements (e.g., flip-flops)
 - Examples: Counters, Shift Registers, FSMs (Finite State Machines)
 
-###  Boolean Algebra
+##  *Boolean Algebra*
 
 **Boolean algebra** is the mathematics of binary logic used in digital circuits. It defines operations, identities, and simplifications that help us analyze and design logic circuits.
 
-###  Boolean Algebra Laws
+####  Boolean Algebra Laws
 
 <div align="center">
 
@@ -237,7 +238,7 @@ Logic circuits are essential for processing binary data. They consist of **input
 
 ---
 
-###  Boolean Simplification Theorems
+####  Boolean Simplification Theorems
 
 <div align="center">
 
@@ -251,11 +252,8 @@ Logic circuits are essential for processing binary data. They consist of **input
 
 </div>
 
----
 
-
-
-## Boolean Terms
+### Boolean Terms
 
 - **Complement**  
   Variable with a bar over it.  
@@ -279,7 +277,7 @@ Logic circuits are essential for processing binary data. They consist of **input
   - `A + B̅` is false only when `A=0` and `B=1`.
 
 ---
-## Canonical Forms: SOP & POS
+## *Canonical Forms: SOP & POS*
 
 Canonical forms express Boolean functions in standard formats.
 
@@ -295,9 +293,9 @@ Canonical forms express Boolean functions in standard formats.
 - Example:  
   F(A, B) = (A + B̅) · (A̅ + B)
   ---
-Now let us discuss some important Combinational circuits. These are few of them: 
 
-##  Decoder
+## *Some Basic Combinational circits*
+###  Decoder
 
 - A **decoder** decodes an input pattern 
 - n inputs and 2^n outputs. Only one the outputs evaluates to one depending on the pattern that comes on the input.
@@ -320,7 +318,7 @@ Now let us discuss some important Combinational circuits. These are few of them:
 
 ---
 
-## Multiplexer (MUX)
+### Multiplexer (MUX)
 
 A **multiplexer** selects one of `N` input lines and connects it to a **single output**, based on **select lines**.
 
@@ -346,7 +344,7 @@ You can implement an AND gate by wiring MUX inputs such that the output = `A •
 
 ---
 
-##  Full Adder
+###  Full Adder
 
 A **full adder** adds three bits: `A`, `B`, and carry-in (`Cin`), producing a **sum** and **carry-out** (`Cout`).
 
@@ -373,7 +371,7 @@ A **full adder** adds three bits: `A`, `B`, and carry-in (`Cin`), producing a **
 
 ---
 
-##  PLA – Programmable Logic Array
+###  PLA – Programmable Logic Array
 
 A **PLA** is a configurable logic device used to implement **combinational logic circuits**.
 
@@ -394,32 +392,32 @@ To implement `F1 = A • B + A̅ • C` and `F2 = A + B • C`, a PLA would:
 
 ---
 
-# Lecture #3: Data Processing & Storage Elements & Seqential circiuts.
+# *Lecture #3: Data Processing & Storage Elements & Seqential circiuts*I
 
 ---
-
-##  Comparator
+## *More Combinational Circuits*
+###  Comparator
 
 A **comparator** is a combinational logic circuit that compares two binary numbers and determines their relative magnitudes.
 
-###  Example: 4-bit Equality Comparator
+####  Example: 4-bit Equality Comparator
 
 - Compares two 4-bit inputs: `A[3:0]` and `B[3:0]`
 - Output is high (`1`) if both inputs are equal.
 
-#### Logic:
+##### Logic:
 ```
 A == B ⇨ (A3 ⊕ B3̅) · (A2 ⊕ B2̅) · (A1 ⊕ B1̅) · (A0 ⊕ B0̅)
 ```
 
-#### Simplified Equality Logic:
+##### Simplified Equality Logic:
 ```
 A == B ⇨ (A3 XNOR B3) · (A2 XNOR B2) · (A1 XNOR B1) · (A0 XNOR B0)
 ```
 
 ---
 
-## Arithmetic Logic Unit (ALU)
+### Arithmetic Logic Unit (ALU)
 
 The **ALU** is a fundamental building block of digital systems. It combines **arithmetic** and **logic operations** into a single hardware unit.
 
@@ -437,20 +435,20 @@ These are the operations it performs and the internal logic of ALU using the cir
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/al%20internal.PNG?raw=true" alt="ALU Internal Logic" width="500">
 </p>
 
-##  Tri-State Buffer
+###  Tri-State Buffer
 
 A **tri-state buffer** allows **gating different signals** onto a wire using an enable signal. It has three output states:
 - Logic 0
 - Logic 1
 - High Impedance (Z) — disconnected from the line
 
-###  Symbol
+####  Symbol
 
 <p align="center">
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/tri_buffer.PNG?raw=true" width="150" alt="Tri-State Buffer Symbol">
 </p>
 
-###  Truth Table
+####  Truth Table
 
 <p align="center">
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/Tri_table.PNG?raw=true" width="150" alt="Tri-State Buffer Truth Table">
@@ -459,15 +457,15 @@ A **tri-state buffer** allows **gating different signals** onto a wire using an 
 - If **Enable = 0**, output **Y = Z** (floating)
 - If **Enable = 1**, output **Y = A**
 
-###  Example: MUX using Tri-State Buffers
+####  Example: MUX using Tri-State Buffers
 
 <p align="center">
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/mux_using_buffer.PNG?raw=true" width="250" alt="MUX using Tri-State Buffers">
 </p>
 
 ---
-
-##  Logic Simplification
+## *Simplifications*
+###  Logic Simplification
 
 Logic simplification helps reduce:
 - **Gate count**
@@ -476,9 +474,9 @@ Logic simplification helps reduce:
 
 It aims to rewrite Boolean expressions in simpler forms without changing functionality.
 
----
 
-##  Karnaugh Maps (K-Maps)
+
+###  Karnaugh Maps (K-Maps)
 
 A **K-Map** is a visual method for minimizing Boolean expressions.
 
@@ -491,12 +489,12 @@ Helps in:
 - Identifying common patterns
 - Eliminating redundant variables
 - Deriving minimal SOP or POS forms
-
-## Storing Information in Circuits
+## *Storing Elemetns*
+### Storing Information in Circuits
 
 To design memory, circuits must be able to capture and retain binary data.
 
-### Basic Building Block: Cross-Coupled Inverters
+#### Basic Building Block: Cross-Coupled Inverters
 
 - A pair of inverters connected in a feedback loop.
 - Forms a bistable circuit with two stable output states.
@@ -507,7 +505,7 @@ To design memory, circuits must be able to capture and retain binary data.
 </p>
 
 
-### Stable and Unstable States
+#### Stable and Unstable States
 
 - **Stable States:**
   - Q = 0, Q̅ = 1
@@ -517,12 +515,12 @@ To design memory, circuits must be able to capture and retain binary data.
   - Not reliable for storing data in this condition.
 
 ---
-## R-S (Reset-Set) Latch
+### R-S (Reset-Set) Latch
 
 - Built using cross-coupled **NAND** gates
 - Stores data in `Q` (with complement `Q'`)
 
-### Inputs:
+#### Inputs:
 - **S (Set)**:  
   `S = 0`, `R = 1` → `Q = 1`
 
@@ -535,58 +533,56 @@ To design memory, circuits must be able to capture and retain binary data.
 - **Invalid**:  
   `S = 0`, `R = 0` → Forbidden state
 
-### Why is `S = R = 0` Invalid?
+#### Why is `S = R = 0` Invalid?
 - Causes `Q = Q' = 1`, violating the rule `Q = NOT Q'`
 - May lead to metastability (oscillations)
 
-### Symbol & Truth Table
+#### Symbol & Truth Table
 <p align="center">
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/sr_Latch_.PNG?raw=true" width="400" />
 </p>
 
----
 
-## Gated D Latch
+
+### Gated D Latch
 
 - Solves the R-S latch problem using extra NAND gates
 - Takes input **D** (Data) and **WE** (Write Enable)
 
-### Behavior:
+#### Behavior:
 - When `WE = 1`: `Q = D` → Data is latched
 - When `WE = 0`: `Q` holds its previous value
 
 - Ensures `S` and `R` are **never 0 at the same time**
 
-### Symbol & Truth Table
+#### Symbol & Truth Table
 <p align="center">
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/g_sr_latch.PNG?raw=true" width="400" />
 </p>
 
 ---
 
-## Register
+### Register
 
 - A **register** is a group of D latches used to store multiple bits
 - All D latches share a common **Write Enable (WE)** signal
 
-### Example: 4-bit Register
+#### Example: 4-bit Register
 - Inputs: `D₀, D₁, D₂, D₃`
 - Outputs: `Q₀, Q₁, Q₂, Q₃`
 - When `WE = 1`, entire `D[3:0]` is stored into `Q[3:0]` simultaneously
-## Memory
+### Memory
 
 - Memory consists of locations that can be **written to** or **read from**.
 
----
 
-### Example: Memory Array with 4 Locations
+
+#### Example: Memory Array with 4 Locations
 
 - Each location is identified using a **unique address**
 - For 4 locations: `log₂(4) = 2` address bits are needed
 
----
-
-### Key Terms
+#### Key Terms
 
 - **Addressability**: Number of bits stored in each memory location  
   → In this example: **8 bits** per location
