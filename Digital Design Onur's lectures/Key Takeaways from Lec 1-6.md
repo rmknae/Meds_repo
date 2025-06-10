@@ -12,12 +12,11 @@ Digital systems power computers, phones, and other smart devices. Learning digit
 
 # *Lecture 1: Foundations of Digital Design and Computer Architecture*  
 
-### Why Use Computers?  
+## *Why Use Computers?*
 We use computers to solve problems quickly and efficiently such as performing calculations, analyzing data, or running applications. Computers solve problems by orchestrating the movement of electrons.
 
-### The Transformation Hierarchy: How Problems Become Solutions  
 
-
+## *The Transformation Hierarchy: How Problems Become Solutions*  
 Computers solve problems through a series of layered steps, from high-level tasks to low-level hardware:
 
 - **Problem**
@@ -65,9 +64,9 @@ Following is a pictre from the lecture:
   <img src="https://raw.githubusercontent.com/rmknae/Meds_repo/main/Digital%20Design%20Onur's%20lectures/pngs/Capture.PNG" alt="Transformation Hierarchy" width="150">
 </p>
 
----
 
-## General-Purpose vs. Special-Purpose Systems
+
+## *General-Purpose vs. Special-Purpose Systems*
 
 ### General-Purpose Systems
 - Can execute **any program**  
@@ -79,24 +78,24 @@ Following is a pictre from the lecture:
 - **Efficient and high-performance**  
 - **Difficult to program and use**
 
----
 
-## Transistors and CMOS Technology
 
-Computers are built from **very large numbers of very small structures** called **transistors**.
+## *Transistors and CMOS Technology*
+
+- Computers are built from **very large numbers of very small structures** called **transistors**.
+- We can **combine many transistors** to build **simple logic gates**, which are the foundation of digital circuits.
+  
+These are few important transistors:
 
 ### MOS Transistors  
-These are made from:
-- **Conductors**  
-- **Insulators**  
-- **Semiconductors**
+- These are made from:
+   - **Conductors**  
+   - **Insulators**  
+   - **Semiconductors**
 
-### Why Are Transistors Useful?  
-We can **combine many transistors** to build **simple logic gates**, which are the foundation of digital circuits.
-
-### Types of MOS Transistors  
-- **n-type (nMOS)**  : Good for *pulling down* the output.
-- **p-type (pMOS)**  : Good for *pulling up* the output.
+- These are the few types of MOS transistors:
+   - **n-type (nMOS)**  : Good for *pulling down* the output.
+   - **p-type (pMOS)**  : Good for *pulling up* the output.
 
 <p align="center">
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/2.PNG?raw=true" width="400" alt="nMOS and pMOS Transistors">
@@ -118,7 +117,7 @@ They both operate logically in the same way. This is how they work:
 
 ---
 
-## Basic Logic Gates  
+## *Basic Logic Gates*  
 
 - **AND Gate:** Outputs 1 only if **all inputs** are 1.  
 - **OR Gate:** Outputs 1 if **at least one input** is 1.  
@@ -133,10 +132,9 @@ They both operate logically in the same way. This is how they work:
 
 Understanding power and energy consumption is crucial in digital design. Efficient systems must manage both **dynamic** and **static** power while performing computation through well-structured **logic circuits**.
 
----
 
 ## *Power and Energy Consumption in Digital Circuits*
-### *Power in Digital Circuits*
+### Power Consumption
 
 ####      Dynamic Power Consumption
 - Power used when signals **switch between 0 and 1**
@@ -152,7 +150,7 @@ Understanding power and energy consumption is crucial in digital design. Efficie
 - Formula:  
   **P_static = V × I_leakage**
 
----
+
 
 ### Energy Consumption
 
@@ -164,7 +162,7 @@ Understanding power and energy consumption is crucial in digital design. Efficie
 
 We must include both dynamic and static power in calculations to estimate real-world energy usage.
 
----
+
 
 ## *Moore’s Law*
 
@@ -175,7 +173,7 @@ We must include both dynamic and static power in calculations to estimate real-w
   - Lower cost per transistor
   - Increased power and heat challenges (especially leakage)
 
----
+
 
 ##  *Logic Circuits*
 
@@ -185,7 +183,7 @@ Logic circuits are essential for processing binary data. They consist of **input
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/logic_circuit.PNG?raw=true" width="400" alt="Logic Circuit Diagram">
 </p>
 
----
+
 
 ### Functional vs. Timing Specifications
 
@@ -200,7 +198,7 @@ Logic circuits are essential for processing binary data. They consist of **input
   - Combination delays
   - Clock constraints (for sequential circuits)
 
----
+
 
 ###  Types of Logic Circuits
 
@@ -236,7 +234,7 @@ Logic circuits are essential for processing binary data. They consist of **input
 
 </div>
 
----
+
 
 ####  Boolean Simplification Theorems
 
@@ -276,7 +274,7 @@ Logic circuits are essential for processing binary data. They consist of **input
   For 2 variables `A` and `B`:  
   - `A + B̅` is false only when `A=0` and `B=1`.
 
----
+
 ## *Canonical Forms: SOP & POS*
 
 Canonical forms express Boolean functions in standard formats.
@@ -292,10 +290,10 @@ Canonical forms express Boolean functions in standard formats.
 - True for output = 0
 - Example:  
   F(A, B) = (A + B̅) · (A̅ + B)
-  ---
 
-## *Some Basic Combinational circits*
-###  Decoder
+
+## *Some Basic Combinational circuits*
+###  1. Decoder
 
 - A **decoder** decodes an input pattern 
 - n inputs and 2^n outputs. Only one the outputs evaluates to one depending on the pattern that comes on the input.
@@ -316,9 +314,9 @@ Canonical forms express Boolean functions in standard formats.
 </div>
 - Only one output is HIGH for each input combination.
 
----
 
-### Multiplexer (MUX)
+
+### 2. Multiplexer (MUX)
 
 A **multiplexer** selects one of `N` input lines and connects it to a **single output**, based on **select lines**.
 
@@ -342,9 +340,9 @@ A **multiplexer** selects one of `N` input lines and connects it to a **single o
 
 You can implement an AND gate by wiring MUX inputs such that the output = `A • B`.
 
----
 
-###  Full Adder
+
+###  3. Full Adder
 
 A **full adder** adds three bits: `A`, `B`, and carry-in (`Cin`), producing a **sum** and **carry-out** (`Cout`).
 
@@ -369,9 +367,8 @@ A **full adder** adds three bits: `A`, `B`, and carry-in (`Cin`), producing a **
 - **Sum = A ⊕ B ⊕ Cin**  
 - **Cout = AB + BCin + ACin**
 
----
 
-###  PLA – Programmable Logic Array
+### 4. PLA – Programmable Logic Array
 
 A **PLA** is a configurable logic device used to implement **combinational logic circuits**.
 
@@ -388,15 +385,16 @@ To implement `F1 = A • B + A̅ • C` and `F2 = A + B • C`, a PLA would:
 - Use a shared set of product terms.
 - Connect these via OR gates to generate F1 and F2 outputs.
 
----
+
 
 ---
 
 # *Lecture #3: Data Processing & Storage Elements & Seqential circiuts*I
 
----
+
 ## *More Combinational Circuits*
-###  Comparator
+
+### 1. Comparator
 
 A **comparator** is a combinational logic circuit that compares two binary numbers and determines their relative magnitudes.
 
@@ -415,9 +413,9 @@ A == B ⇨ (A3 ⊕ B3̅) · (A2 ⊕ B2̅) · (A1 ⊕ B1̅) · (A0 ⊕ B0̅)
 A == B ⇨ (A3 XNOR B3) · (A2 XNOR B2) · (A1 XNOR B1) · (A0 XNOR B0)
 ```
 
----
 
-### Arithmetic Logic Unit (ALU)
+
+### 2. Arithmetic Logic Unit (ALU)
 
 The **ALU** is a fundamental building block of digital systems. It combines **arithmetic** and **logic operations** into a single hardware unit.
 
@@ -435,7 +433,7 @@ These are the operations it performs and the internal logic of ALU using the cir
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/al%20internal.PNG?raw=true" alt="ALU Internal Logic" width="500">
 </p>
 
-###  Tri-State Buffer
+###  3. Tri-State Buffer
 
 A **tri-state buffer** allows **gating different signals** onto a wire using an enable signal. It has three output states:
 - Logic 0
@@ -463,7 +461,7 @@ A **tri-state buffer** allows **gating different signals** onto a wire using an 
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/mux_using_buffer.PNG?raw=true" width="250" alt="MUX using Tri-State Buffers">
 </p>
 
----
+
 ## *Simplifications*
 ###  Logic Simplification
 
@@ -494,7 +492,7 @@ Helps in:
 
 To design memory, circuits must be able to capture and retain binary data.
 
-#### Basic Building Block: Cross-Coupled Inverters
+### 1. Cross-Coupled Inverters
 
 - A pair of inverters connected in a feedback loop.
 - Forms a bistable circuit with two stable output states.
@@ -504,8 +502,7 @@ To design memory, circuits must be able to capture and retain binary data.
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/croos_coupled_invertors.PNG?raw=true" width="150" alt="Cross Coupled Inverters">
 </p>
 
-
-#### Stable and Unstable States
+There are two States:
 
 - **Stable States:**
   - Q = 0, Q̅ = 1
@@ -514,13 +511,13 @@ To design memory, circuits must be able to capture and retain binary data.
   - The circuit may oscillate or produce undefined outputs.
   - Not reliable for storing data in this condition.
 
----
-### R-S (Reset-Set) Latch
+
+### 2. R-S (Reset-Set) Latch
 
 - Built using cross-coupled **NAND** gates
 - Stores data in `Q` (with complement `Q'`)
 
-#### Inputs:
+These are the inputs:
 - **S (Set)**:  
   `S = 0`, `R = 1` → `Q = 1`
 
@@ -544,7 +541,7 @@ To design memory, circuits must be able to capture and retain binary data.
 
 
 
-### Gated D Latch
+### 3. Gated D Latch
 
 - Solves the R-S latch problem using extra NAND gates
 - Takes input **D** (Data) and **WE** (Write Enable)
@@ -560,9 +557,8 @@ To design memory, circuits must be able to capture and retain binary data.
   <img src="https://github.com/rmknae/Meds_repo/blob/main/Digital%20Design%20Onur's%20lectures/pngs/g_sr_latch.PNG?raw=true" width="400" />
 </p>
 
----
 
-### Register
+### 4. Register
 
 - A **register** is a group of D latches used to store multiple bits
 - All D latches share a common **Write Enable (WE)** signal
@@ -571,7 +567,8 @@ To design memory, circuits must be able to capture and retain binary data.
 - Inputs: `D₀, D₁, D₂, D₃`
 - Outputs: `Q₀, Q₁, Q₂, Q₃`
 - When `WE = 1`, entire `D[3:0]` is stored into `Q[3:0]` simultaneously
-### Memory
+- 
+### 5. Memory
 
 - Memory consists of locations that can be **written to** or **read from**.
 
