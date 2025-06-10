@@ -589,3 +589,290 @@ These are the inputs:
 
 - **Scalability**:  
   Real-world memory is **much larger** (e.g., **billions** of locations)
+
+#  *Lecture 4: Sequential Logic Design II*
+
+
+
+## *Sequential Logic*
+- Sequential circuits **depend on current and past inputs** (have memory).
+- Examples of memory elements:
+  - Cross-coupled inverter
+  - R-S Latch, Gated D Latch
+  - D Flip-Flop, Register, Memory
+
+
+
+## *Finite State Machines (FSMs)*
+### Components:
+1. **Finite number of states**
+2. **Finite inputs and outputs**
+3. **State transition logic**
+4. **Output logic**
+
+### FSM Building Blocks:
+- **Next state logic** (combinational)
+- **State register** (sequential - D Flip-Flops)
+- **Output logic** (combinational)
+
+
+
+## *D Flip-Flop*
+- Captures value on **rising edge** of the clock.
+- Maintains stable output during rest of the clock cycle.
+- Key to implementing edge-triggered state registers.
+
+
+
+## *FSM Example: Traffic Light Controller*
+- Inputs: `TA`, `TB` (traffic sensors)
+- Outputs: `LA`, `LB` (traffic lights)
+- FSM type: **Moore Machine** (outputs depend only on state)
+- Transition diagram and state/output tables defined
+
+## *FSM Design Procedure*
+1. Identify all states
+2. Define transitions and outputs
+3. Create:
+   - **State transition diagram**
+   - **State transition table**
+   - **Output table**
+4. Select suitable **state encoding** method:
+   - Binary encoding
+   - One-hot encoding
+   - Output-based encoding
+
+
+
+## *Moore vs. Mealy FSMs*
+- **Moore**: output depends only on state
+- **Mealy**: output depends on state **and** input
+
+
+
+##  *FSM Optimization Techniques*
+- Simplify next state and output logic using logic equations
+- Trade-offs in encoding:
+  - One-hot: simpler logic, more flip-flops
+  - Binary: fewer flip-flops, more logic
+  - Output encoding: reduces output logic in Moore machines
+
+
+
+##  *Conclusion*
+- FSMs are a fundamental model for designing sequential systems
+- Use flip-flops (especially D) as basic building blocks for state registers
+- Carefully choose encoding and transition logic for efficiency
+
+# *Lecture 5: HDL & Verilog: Design and Timing Concepts*
+
+## *Hardware Description Languages & Verilog II*
+
+### 1. Verilog Design Methodologies
+
+- Hierarchical design is emphasized: complex modules are built from simpler modules using top-down or bottom-up approaches.
+- Verilog allows both structural (gate-level) and behavioral (functional) modeling.
+
+### 2. Structural Modeling
+
+- Modules can be instantiated multiple times to build larger systems.
+- Short-form instantiations should be avoided for maintainability.
+- Predefined gate primitives (e.g., `and`, `or`, `not`) are supported.
+
+### 3. Behavioral Modeling
+
+- `assign` statements describe logic using operators: `&`, `|`, `^`, `~`, `? :`.
+- Supports bitwise operations, reductions, and conditional assignments.
+
+### 4. Multi-bit Signals (Buses)
+
+- Syntax: `[31:0] a` for a 32-bit signal.
+- Bit slicing and duplication via `{}` and `{n{expr}}`.
+
+### 5. Parameterization
+
+- Modules can be parameterized to support reuse across different bit widths.
+
+```verilog
+module mux2 #(parameter width = 8)(...);
+```
+
+### 6. Sequential Logic Basics
+
+- Requires `always` blocks, `posedge`/`negedge`, and `reg` types.
+- D flip-flops model memory behavior.
+- Use `<=` (non-blocking) inside `always` blocks for sequential logic.
+
+### 7. Reset Strategies
+
+- Asynchronous Reset: triggered independently of clock.
+- Synchronous Reset: triggered only on clock edges.
+
+### 8. Best Practices
+
+- Use consistent naming and bus ordering (`[MSB:LSB]`).
+- Define one module per file and match file names to module names.
+
+## *Timing and Verification*
+
+### 1. Combinational Circuit Timing
+
+- Real circuits have delays due to transistor switching times.
+- Defined by:
+  - Propagation delay (tpd) – max delay until output is stable.
+  - Contamination delay (tcd) – min delay until output starts to change.
+
+### 2. Glitches
+
+- Arise due to unequal path delays.
+- Often harmless but important in sensitive designs.
+
+### 3. Sequential Timing Constraints
+
+- Flip-flops require:
+  - Setup time (tsetup): input must be stable before clock edge.
+  - Hold time (thold): input must remain stable after clock edge.
+  - Clock-to-Q delays: tpcq and tccq.
+
+### 4. Timing Violations
+
+- Setup violation: causes data corruption.
+- Hold violation: harder to fix post-fabrication; must ensure `tccq + tcd > thold`.
+
+### 5. Clock Skew
+
+- Clock signals don’t arrive simultaneously everywhere.
+- Affects both setup and hold time constraints.
+
+### 6. Circuit Verification
+
+- Simulation is essential:
+  - Functional simulation (HDL-level).
+  - Timing simulation (includes delay modeling).
+- Formal verification and testbenches ensure correctness.
+- Testbenches:
+  - Generate inputs.
+  - Check outputs.
+  - Use simulation-only constructs like `#10`, `$display`.
+
+
+---
+
+# *Lecture 6: Timing and Verification II*
+
+## *Focus Topics*
+- Combinational and sequential timing analysis
+- Setup and hold time constraints
+- Glitches and how to handle them
+- Circuit verification techniques
+- Testbenches and Verilog simulation
+- Clock skew and timing violations
+
+
+
+## *Combinational Circuit Timing*
+- Circuit delay arises from transistor switching time and wire delays.
+- Delay types:
+  - **Propagation delay (tpd):** maximum time from input to stable output
+  - **Contamination delay (tcd):** minimum time until output begins to change
+- **Critical path:** longest tpd in the circuit
+- Timing affected by environmental conditions and design variations
+
+
+
+## *Glitches*
+- Occur when input changes cause momentary incorrect output values
+- Caused by unequal path delays
+- Can be visualized using Karnaugh maps
+- Glitch avoidance increases complexity and area, and is not always necessary
+
+
+
+## *Sequential Circuit Timing*
+- D flip-flops require inputs to be stable for:
+  - **tsetup** before clock edge
+  - **thold** after clock edge
+- Output of flip-flop is delayed by:
+  - **tpcq (propagation clock-to-q)**
+  - **tccq (contamination clock-to-q)**
+
+
+
+## *Setup Time Constraint*
+- To avoid setup violations:
+
+```
+Tc > tpcq + tpd + tsetup
+```
+
+- Tc (clock period) is determined by the longest data path delay
+
+
+
+## *Hold Time Constraint*
+- To avoid hold violations:
+
+```
+tccq + tcd > thold
+```
+
+- Short paths must have minimum delay to ensure hold is maintained
+
+
+
+## *Clock Skew*
+- Clock signals arrive at different components at slightly different times
+- Affects both setup and hold constraints:
+- Increases tsetup and thold margins
+- Must be minimized via intelligent clock network design
+
+
+
+## *Circuit Verification*
+- Ensures both logical correctness and timing compliance
+- High-level functional simulation using Verilog or other languages
+- Low-level circuit simulation for detailed timing and power analysis
+
+
+
+## *Functional Verification*
+- Use **testbenches** to simulate DUT (Device Under Test)
+- Simple testbench: hardcoded input/output
+- Self-checking testbench: automatically checks expected outputs
+- Testvectors: read from a file
+- Automatic testbench: uses a golden model for correctness
+- Testbench types:
+  - Manual
+  - Self-checking
+  - Automatic with testvectors
+  - Automatic with golden model
+
+
+
+## *Timing Verification*
+- Performed after synthesis using tools like Xilinx Vivado
+- Tools report:
+  - Worst-case path delay
+  - Maximum operating frequency
+  - Timing violations
+
+
+## *Meeting Timing Constraints*
+- Optimize logic on critical paths
+- Add buffers to short paths for hold violations
+- Manual iteration may be needed to meet tight timing
+- Design principles:
+  - **Critical path design**: shorten the longest logic path
+  - **Balanced design**: evenly distribute delay
+  - **Optimize for common case**, but don't ignore edge cases
+
+
+
+---
+
+
+
+
+
+
+
