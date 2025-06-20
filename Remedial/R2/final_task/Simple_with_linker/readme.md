@@ -3,9 +3,7 @@
 riscv64-unknown-elf-gcc -o factorial.elf factorial.S
 
 
-spike -d $PK  factorial.elf 
+riscv64-unknown-elf-ld -T linker.ld -o factorial.elf factorial.o
 
 
 where $PK is simply the path to where your pk in installed
-
-After you do this , you will be able to see "Factorial is 120" on terminal
